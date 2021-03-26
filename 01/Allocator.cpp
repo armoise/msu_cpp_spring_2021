@@ -11,7 +11,7 @@ void Allocator::makeAllocator(size_t maxSize) {
 
 
 char* Allocator::alloc(size_t size) {
-    if(this->size - size < 0 || start == nullptr) {
+    if(this->size < size || start == nullptr) {
         return nullptr;
     }
     char *result = offset;
